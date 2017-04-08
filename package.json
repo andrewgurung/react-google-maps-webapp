@@ -1,0 +1,26 @@
+{
+  "name": "react-google-maps-webapp",
+  "version": "1.0.0",
+  "description": "Simple React Web App which allows user to search and save locations using Google Maps",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "watchify -v -d -t [ reactify --es6 ] main.js -o compiled.js",
+    "build": "NODE_ENV=production browserify -t [ reactify --es6 ] main.js | uglifyjs > compiled.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewgurung/react-google-maps-webapp.git"
+  },
+  "keywords": [],
+  "author": "Andrew Gurung",
+  "license": "MIT",
+  "homepage": "http://www.andrewgurung.com",
+  "dependencies": {
+    "browserify": "^14.3.0",
+    "react": "^15.5.3",
+    "reactify": "^1.1.1",
+    "uglify-js": "^2.8.21",
+    "watchify": "^3.9.0"
+  }
+}
