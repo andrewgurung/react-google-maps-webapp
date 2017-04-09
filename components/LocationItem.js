@@ -2,10 +2,17 @@ const React = require('react');
 
 var LocationItem = React.createClass({
   render() {
+    var cn = "list-group-item";
+
+		if(this.props.active){
+			cn += " active-location";
+		}
+
     return (
-      <div>
-        <h4>Location Item</h4>
-      </div>
+      <a className={cn}>
+        <span className="createdAt"></span>
+        <span className="glyphicon glyphicon-menu-right"></span>
+      </a>
     );
   }
 });
