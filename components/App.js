@@ -24,7 +24,7 @@ var App = React.createClass({
   },
 
   toggleFavorite(address) {
-    if(this.isAddressInFavorites) {
+    if(this.isAddressInFavorites(address)) {
       this.removeFromFavorites(address);
     } else {
       this.addToFavorites(address);
