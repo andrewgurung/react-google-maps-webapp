@@ -1,6 +1,11 @@
 const React = require('react');
+var moment = require('moment');
 
 var LocationItem = React.createClass({
+  handleClick() {
+      this.props.onClick(this.props.address);
+  },
+
   render() {
     var cn = "list-group-item";
 
@@ -9,8 +14,9 @@ var LocationItem = React.createClass({
 		}
 
     return (
-      <a className={cn}>
-        <span className="createdAt"></span>
+      <a className={cn} onClick={this.handleClick}>
+        {this.props.address}
+        <span className="createdAt">{ moment(this.props.timestamp).fromNow() }</span>
         <span className="glyphicon glyphicon-menu-right"></span>
       </a>
     );
